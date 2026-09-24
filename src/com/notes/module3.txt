@@ -1,0 +1,33 @@
+
+#### QA vs QC vs QE
+
+QA vs QC
+-------
+
+QA is process related [high level]
+QA focuses on building in quality
+QA is preventing defects
+QA is process related
+QA for entire Lifecycle in SDLC
+
+QC is the actual testing or the software - verfiying and validation
+QC focuses on testing for quality
+QC is detecting defects
+QC is product oriented
+QC for testing part in SDLC
+
+
+p - people --- QC [testers]
+p - process --- QA
+p - product
+
+
+
+SDLC -> QA managing everything
+----
+Requiement analysis
+desinging
+coding
+testing
+deployement
+maintanance

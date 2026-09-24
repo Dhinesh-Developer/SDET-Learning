@@ -96,6 +96,27 @@ SRS - system requirement specfication
 4. Validation typically involves actual testing
 5. Unit testing, integration , system testig , User accpetance testing 
 
+ ------------ [ STATIC TESTING ] ------------------: 
+
+REVIEW -> conducts on documents to ensure correctness and completeness
+	1. Requirement reviews
+	2. Design reviews
+	3. Code reviews
+	4. Test plan reviews
+	5. Test cases reviews etc..
+
+WALKTHROUGH -> informal [not having proper plan]
+	1. it is a informal review
+	2. Author reads the documents or code and discuss with peers
+	3. It's not pre-planned and can be done whenever required
+	4. Also walkthrough does not have minutes of the meet
+
+INSPECTION -> formal
+	1. Its a most formal review page
+	2. In which at least 3-8 people will sit in the meeting 1-reader 2-writer 3-moderator plus concerned
+	3. Inspection will have a proper schedule which will be intimated via email to the concerned developer/tester
+
+
 
 
 
