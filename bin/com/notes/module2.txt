@@ -1,0 +1,107 @@
+
+--- SDLC - software development life cycle
+ - software development life cycle is a [process] used by software industry to design, develop and test software's
+ p = people
+ p = process
+ p = product
+
+1. Requirement analysis
+2. design
+3. development
+4. Testing
+5. maintanance
+
+--- Module -> is a feature of software, which contains some set of functionalities
+ex. banking - login,check balance, fund transfer, req statement, add payee etc..
+
+---  [ Waterfall model ]--- outdated model, old model -> prefer for small project
+	-> Requiement analysis [SRS document] - system design - implementation - testing - deployment - maintanance
+	-> Each phase requires the input and produces the output
+	-> each phase depends on the previous phase
+	
+-	[advantages]:
+
+	 1. Quality of the product will be good
+	 2. since requirement changes are not allowed, chances of finding bugs will be less.
+	 3. Initial investment is less since the testers are hired at the later stages.
+	 4. preferred for small projects where requiements are freezed
+	 
+	 [Disadvantages]:
+	 
+	 1. requirement changes are not allowed [ex, after customer giving new requiement is not allowed]
+	 2. if there is defect in requirement that will be continued in later phases.
+	 3. Total investment is more, because time taking for rework on defect is time consuming, which leads to high investment
+	 4. Testing will after coding.
+
+
+--- [ Spiral/iterative model ] -> ( cycle phase  -  version control system ), version will release[cycle 1,cycle 2,cycle 3...]
+		- This is model is used by product based company.
+	-> cost
+	-> planning [requirement analysis]
+	-> Risk analysis [prototype]
+	-> Engineering & Execution [development and testing]
+	-> Evaluation [customer evaluation]
+	
+	1. spiral model is iterative model or version control model
+	2. spiral model overcome drawbacks of waterfall model
+	3. we follow spiral model whenever there is dependency on the modules
+	4. in every cycle new software will be released to customer
+	5. software will be released in multiple versions, so it is also called version control model
+	
+	[advantages]:
+	- Testing is done in every cycle, before going to the next cycle.
+	- Customer will get to use the software for every module
+	- Requirement changes are allowed after every cycle before going to the next cycle.
+	
+	[disadvantages]:
+	- Requirement changes are NOT allowed in between the cycle
+	- Every cycle of spiral model looks like waterfall model
+	- There is no testing in requirement & design phase
+
+
+
+--- [v-model / vv-model]: verfication-validation model
+ -> verification and validation -> review[BRS CRS URS , SRS] --- user acceptance testing [black box testing] system testing -> review[HLD,LLD] --- integration testing -> coding [unit testing]--- white box testing
+ 
+BRS - business requirement specfication
+CRS - customer requirement specfication
+URS - User requirement specfication
+SRS - system requirement specfication
+
+	-> every phases having testing [reviews, walkthrough and insepction] testing the document [static testing documents]
+	
+
+	White testing -> developers testing [testing the coding part]
+	Unit Testing -> testing the single module 
+	Integration testing -> mupltiple modules testing
+	system testing -> [testers] testing team -> block box testing[we does not know inside the system]
+	user accptance testing -> customers
+	
+	 -> Dynamic Testing -> Testing the actual software [white box, black box testing]
+	-> Static Testing: -> Testing the project related documents is called as static testing. [reviews, walkthrough and insepction]
+
+
+-- What is verfication vs validation :
+- VERIFICATION : Static testing
+ 1. Verification checks whether we are building the right product.
+ 2. Focus on documentation
+ 3. Reviews
+ 4. Walkthroughs
+ 5. Inspections
+ 
+- VALIDATION: Dynamic testing
+1. VAlidation checks whether we are building the product right
+2. takes place after verifications are completed
+3. Focus on software
+4. Validation typically involves actual testing
+5. Unit testing, integration , system testig , User accpetance testing 
+
+
+
+
+
+
+
+
+
+

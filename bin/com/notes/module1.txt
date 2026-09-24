@@ -1,0 +1,65 @@
+Introduction
+
+--- Software testing:
+ The process of identifying defects in software to ensure quality before releasing it to customers or clients
+
+--- Manual Testing:
+ Testing that is carried out manually by a human tester without the use of automation tools.
+ Types:
+ 1. re-testing -> Testing the same functionality after defects have been fixed.
+ 2. Regression Testing -> Testing to ensure the new changes do not negatively affect existing functionality.
+ 
+ Module 1 : Testing concepts
+ Module 2 : Testing Project
+ Module 3 : Agile process -> Jira
+ 
+---------------------------------------------------------------------------------------------------------------------------------------
+Software -> A software is a collection of computer program that helps us to perform a task.
+
+Types of software:
+1. System software -> ex. device drivers, operating systems, servers, utilities etc.
+2. Programming Software -> Ex. compilers, debuggers, interpreter etc.
+3. Application software -> WEb application, Mobile apps, Desktop applications etc.
+
+Ex: 
+ X Bank(company) --> IT company --> Develop --> Test --> Deliver --> XBank
+
+
+What is software testing ->  
+	[software testing is a part of software development], is an activity to detect and identify the defects in the software.
+	The objective of testing is to release the quality of product to the client
+	
+What is software quality?
+1. Bug-free
+2. Delivered on time
+3. Within budget
+4. Meets requirements and/or expectations
+5. Maintainable
+	
+What is project vs product?
+- If software application is developed for [[ specific customer ]] based on the requirement then it is called project
+- If software application is developed for [[ multiple customers ]] based on market requirements then it is called product
+
+Service based -> ex.tcs, accenture, -> they work for specific customer
+Product based -> ex. Google, Microsoft -> They work for multiple customer i mean their product used by many
+
+Why we need testing ?
+ - release the quality products
+ 
+Error, Bug/defect & Failure
+1. error -> incorrect human actions -> ex. developers did some invalid code [normally human mistake]
+2. Bug/defect -> deviated from excepted behaviour from the actual behaviour  [mismatch- what our exceptations]
+3. Failure -> deviated identified by end user while working with the software is called failure
+
+Why the software has bugs ?
+ 1. Miscommunication or no communication [requirements mismatch]
+ 2. Software complexity
+ 3. Programming errors [responsibility of the developers] unexcepted errors
+ 4. Changing requirements
+ 5. Lack of skilled testers
+
+
+
+
+
+
