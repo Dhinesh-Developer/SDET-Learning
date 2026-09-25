@@ -1,7 +1,7 @@
 
 #### QA vs QC vs QE
 
-QA vs QC
+QA vs QC vs QE(Quality Engineering [Automation testing])
 -------
 
 QA is process related [high level]
@@ -22,7 +22,6 @@ p - process --- QA
 p - product
 
 
-
 SDLC -> QA managing everything
 ----
 Requiement analysis
@@ -31,3 +30,66 @@ coding
 testing
 deployement
 maintanance
+
+-----------------------------------------------------------
+
+--- Levels of Testing
+- unit testing
+- Integration Testing
+- Systm Testing
+- User Acceptance Testing(UAT)
+
+Unit Testing
+------
+- A unit is a single component or module of a software
+- Unit testing conducts on a single program or single module
+- Unit Testing is white box testing technique
+- unit testing is conducted by the developers
+
+--- [ unit testing techniques]
+- basis path testing 
+- control structure testing
+- conditional coverage
+- loops coverage
+- mutation testing - passing different types of input and testing our code.
+
+--- Integration Testing
+--------------------
+- Integration testing preformed between 2 or more modules
+- Integration testing focuses on checking data communication between multiple modules
+- Integration testing is white box testing technique.
+
+	[Types]:
+	
+- Incremental Integration testing - Incrementally adding the modules and testing the data flow between the modules.
+	
+	[Approaches]: 
+	top down - Incrementally adding the modules and testing the data flow between the modules. And ensure the module added is the child of previos module
+	Bottom up - Incrementally adding the modules and testing the data flow between the modules. And ensure the module added is the parent of the previous module 
+	
+- Non-Incremental Integration testing - 
+	Incrementally adding the modules and testing the data flow between the modules. And ensure the module added is the parent of the previous module.
+	Adding the module in a single shot and test the data flow between modules.
+	
+	Drawbacks:
+	- We might miss data flow between some of the modules.
+	- If you find any defect we cant understand the root cause of defect
+
+System Testing
+------------
+- Testing overall functionality of the application with respective client requiements
+- It is a black box testing technique
+- This testing is conducted by testing team
+- After completion of component and integration level testing's we start system testing
+- Before conducting system testing we should know the customer requiements
+
+[System testing focuses on below aspects]
+- User interface Testing (GUI)
+- Functional Testing
+- non- functional testing
+- usability testing
+	
+
+
+
+
