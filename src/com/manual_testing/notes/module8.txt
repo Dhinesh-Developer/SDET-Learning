@@ -1,0 +1,110 @@
+------------------------ TESt plan contents -----------------------------------
+	- A test plan is a document that describes the test scope, test strategy, objectivites, schedule, deliverables and resources
+	required to perform testing for a software product.
+
+[Test plan template contents]:
+-----------------------------
+
+1. Overview
+2. Scope
+	- Inclusions
+	- Test environments
+	- Exclusions
+3. Test strategy
+4. Defect reporting procedure
+5. Roles/ Responsibilites
+6. Test schedule
+7. TEst deliveralbes
+8. Pricing
+9. Entry and exit criteria
+10. Suspension and resumption criteria
+11. Tools
+12. Riks and migigations
+13. Approvals		
+	
+------------------------------------------
+
+use case:
+--------
+	- use case describes the requiement
+	- use case contains THREE items
+		- Actor -> which is the user, which can be single person or a group of people, interacting with a process.
+		- Action -> which is to reach the final outcome
+		- Goal/Outcome ->  which is the successful user outcome
+Test Scenario:
+--------------
+	- A possible area to be tested (What to test)
+
+Test case:
+---------
+	- step by step actions to be performed to validate functionality of AUT (How to test)
+	- Test case contains test steps, expected result & validate result		
+
+Use case v/s Test case
+---------------------
+-> use case: Describes functional requirement, prepared by business analyst (BA)
+-> Test case: Describes Test steps/ procedure, prepared by Test Engineer
+
+Test scenario v/s Test case
+--------------------------
+-> Test scenario is 'what to be tested' and test case is 'How to be tested'
+ex:
+	- Test scenario: Checking the funcionality of login button
+	- TC1 : Click the button without entering user name and password
+	- TC2 : Click the button only entering user name
+	- Tc3 : Click the button while entering wrong user name and wrong password
+
+Test suite : Test suite is group of tesc cases which belongs to same category
+
+what is Test case?
+-----------------
+	- A test case is a set of actions executed to validate particular feature or functionality of your software application
+
+Test case contents
+-----------------
+1. test case ID
+2. Test case title
+3. Description
+4. Pre-condition
+5. Priority (P0,P1,P2,P3) - order
+6. Requirement ID
+7. steps/ Actions
+8. Excepted result
+9. Actual Result
+10. Test data
+
+
+Requirement Traceability Matrix (RTM) -> [testers will do it]
+-------------------------------------
+1. What is RTM (reqirement traceability matrix)?
+	- RTM describes the mapping of requirement's with the test cases
+	- The main purpose of RTM is to see that all test cases are covered so that no functionality 
+		should miss while doing software testing
+
+2. Requirement traceability matrix- Parameters include
+ 	- Requirement ID
+ 	- Requirement description
+ 	- Test case ID's		
+		
+Ex.sampe RTM
+
+req no           req desc                          test case ID                          status
+123           login to the application               TC01, TC02                         TC01- pass, TC02- pass
+345           Ticket creation                         TC04,TC05,TC06                    TC04- pass, TC05- Fail
+456           Search Ticket                        TC011, TC012                          TC011-pass , TC012- Fail
+
+
+Test Environment
+-----------------
+ 	- TEst enrironment is a platform specially build for test case execution on the software product
+ 	- It is created by integrating the required software and hardware along with proper network configurations
+ 	- Test envirnoment simulates production/ real time environment
+ 	- Another name of test environments is TEST BED.
+
+
+
+
+
+
+
+

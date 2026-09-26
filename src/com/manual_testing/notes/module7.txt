@@ -14,7 +14,7 @@
  	input - project plan, functional requirement
  	activities ->
  		1. Identify the resources
- 		2. team foundataionu
+ 		2. team foundataion
  		3. test estimation
  		4. Preparation of test plan
  		5. reviews on test plan
@@ -29,7 +29,7 @@
  	activities ->
  		1. preparation of test scenarios
  		2. preparation of test cases
- 		3.	reviews ot test cases
+ 		3. reviews ot test cases
  		4. Traceability matrix
  		5. Test case signoff
  	responsibilities - Test lead/ team lead(30%), Test Engineers(70%)
@@ -39,7 +39,7 @@
 [3. Test Execution]
 -----------------
  	phase - 
- 	input - functional requiements, test plan, test cases, build from development teams
+ 	input - functional requirements, test plan, test cases, build from development teams
  	activities ->
  		1.executing test cases, 
  		2.preparation of test report,
@@ -59,6 +59,7 @@
 
  	responsibilities - Test lead/ team lead(10%), Test engineers(90%)
  	outcome - defect report
+ 	
  	
 [5. Test closure/ sign-off]
 -----------------
