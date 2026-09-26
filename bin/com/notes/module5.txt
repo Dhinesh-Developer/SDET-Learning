@@ -1,0 +1,110 @@
+[Software testing Techniques]
+
+Regression Testing ----- >
+------------------
+ -> Testing conducts on modified build to make sure there will not be impact on existing funcionality because of changes like adding/deleting/modifying features.
+
+1. unit regression testing: -> Testing only the changes/modification done by the developer
+2. regional regression testing: -> Testing the modified module along with the impacted modules. Impact analysis meeting conducts to identify impacted modules with QA and Dev.
+3. Full regression -> Testing the main feature & remaining part of the application,
+	Ex. Dev has done changes in many modules, instead of identiying impacted modules, we perform one round of full regression. 
+
+Re- Testing ----- >
+-------------------
+	- whenever the developer fixed the bug, tester will test the bug fix is called re-testing
+	- tester close the bug if it worked ortherwise re-open and send to developer
+	- to ensure that the defects which were found and posted in the earlier build were fixed or not in the current build
+```[ex].
+	- build 1.0 was released, Test team found some defects (Defect id 1.0.1,1.0.2) and posted.
+	- Build 1.1 was released, now testing the defects 1.0.1 and 1.0.2 in this build is retesting.	
+
+Smoke- testing ---- > Basic testing -> initial stage of testing phase, [developers or tester] can do [this test is pass then accept the bill]
+--------------------
+	- Smoke test is done to make sure the build we received from the development team is testable/stable or not
+	- Smoke testing is performed by both developers and testers
+	- Smoke testing build may be either stable on unstable
+	- it is done on initial builds
+	- it is part of basic testing
+	- usually it is done every time there is a new build release
+Ex. Inital or unstable build -> smoke testing -> smoke test is passed -> yes -> System and or regression testing
+																	->	No -> Build rejected
+	
+Sanity Testing ---- > [only done by testers] , [this test is pass then accept the bill]
+--------------------
+	- Sanity testing is done during the release phase to check for the main functionalities of the application without going deeper
+	- Sanity testing is performed by testers alone
+	- Sanity testing build is relatively stable
+	- it is done on stable builds
+	- it is a part of regression testing
+	- if is planned when there is no enough time to do in depth testing
+Ex. Stable build -> sanity testing -> sanity test is passes -> yes -> System and/or regression testing	
+															-> No -> Build rejected
+															
+Exploratory testing ----- >
+-------------------															
+	- we have to explore the application, understand completely and test it
+	- understand the application, identity all possible scenarios, document it then use if for testing
+	- we do exploratory testing when the application ready but there is no requirement
+	- Test engineer will do exploratory testing when there is no requiement
+	
+	Drawbacks:
+	---------
+		- You might misunderstand any feature as a buy (or) any bug as a feature since you do not have requirement
+		- time consuming
+		- If there is any bug in application, you will never know about it
+
+Adhoc Testing ----- > [no documentation, No test design, No test case]
+------------------
+	- Testing application randomly without any test cases or any business requiement document
+	- Adhoc Testing is an informal testing type with an aim to break the system
+	- Tester should have knowledge of application even though he doesn't have requirements/test cases.
+	- This testing is usually an unplanned activity
+
+Monkey / Gorilla Testing ----- > 
+------------------------
+	- Testing application randomly without any test cases or any business requirement document
+	- Adhoc testing is an informal testing type with an aim to break the system
+	- Tester do not have knowledge of application
+	- Suitable for gaming applications.
+
+Positive Testing ----- >
+-----------------------
+	- Testing the application with valid inputs is called as positive testing
+	- it checks whether an application behaves as expected with positive inputs
+	- for example -> Enter only numbers -> 999999 positive testing
+
+Negative Testing ----- >
+-----------------------
+	- Testing the application with invalid inputs is called as negative testing
+	- it checks whether an application behaves as expected with the negative inputs
+	- for example -> Enter only numbers -> abcdef negative testing
+
+End-to-end testing ----- >
+-------------------------
+	- Testing the overall functionalities of the system including the data integration among all the modules is called end-to-end testing		
+		Ex... Login,add new customer, edit customer, delete customer, logout
+
+Globalization Testing ------ >
+-----------------------------
+	- performed to ensure the system or software application can run in any cultural or local envirnonment
+	- Different aspects of the software application are tested to ensure that is supports every language and different attributes
+	- It tests the different currency formats, mobile number formats and address formats are supported by the application
+	 - For example-> Facebook.com supports many of the languages and it can be accesses by people of differnet countries, hence it is a globalized product
+	
+Localiztion Testing ----- >
+-------------------------
+	- Performed to check system or software application for a specfic geographical and cultural environment
+	- Localized product only supports the specific kind of language and is usable only in specific region
+	- It testes the specific currency format, mobile number format and address format is working properly or not
+	- For example, Baidu.com supports only the chinese lanugage and can be accessed only by people of few countries, Hence it is a localized product	 
+	 
+	 
+	 
+
+
+
+
+
+
+
+
