@@ -1,4 +1,4 @@
------------------------- TESt plan contents -----------------------------------
+------------------------ Test plan contents -----------------------------------
 	- A test plan is a document that describes the test scope, test strategy, objectivites, schedule, deliverables and resources
 	required to perform testing for a software product.
 
@@ -19,7 +19,7 @@
 9. Entry and exit criteria
 10. Suspension and resumption criteria
 11. Tools
-12. Riks and migigations
+12. Riks and migations
 13. Approvals		
 	
 ------------------------------------------
@@ -86,9 +86,9 @@ Requirement Traceability Matrix (RTM) -> [testers will do it]
  	- Requirement description
  	- Test case ID's		
 		
-Ex.sampe RTM
-
-req no           req desc                          test case ID                          status
+[Ex.sample RTM]
+-------------
+[req no]:           [req desc]:                          [test case ID]:                          [status]:
 123           login to the application               TC01, TC02                         TC01- pass, TC02- pass
 345           Ticket creation                         TC04,TC05,TC06                    TC04- pass, TC05- Fail
 456           Search Ticket                        TC011, TC012                          TC011-pass , TC012- Fail
@@ -100,6 +100,125 @@ Test Environment
  	- It is created by integrating the required software and hardware along with proper network configurations
  	- Test envirnoment simulates production/ real time environment
  	- Another name of test environments is TEST BED.
+
+TEst Execution
+--------------
+ - During this phase test team will carry out the testing based on the test plans and the test cases prepared
+ = Entry Criteria : Test cases, Test data and Test plan
+ - Activities:
+ 	1. test cases are executed based on the test planning
+ 	2. Status of test cases are marked, like passed, Failed, Blocked , run and others
+ 	3. Documentation of test results and log defects for failed cases is done
+ 	4. All the blocked and failed test cases are assigned bug ids
+ 	5. Retesting once the defects are fixed
+ 	6. Defects are tracked till closure
+ 	
+  - Deliverables: 
+  	  provides defect and test case execution report with completed results
+
+	Guildelines for Test execution:
+	-----------------------------
+		- the build being deployed to the QA envirnoment is the most important part of the test execution cycle
+		- Test execution is done in Quality Assurance (QA) environment
+		- Test execution happens in multiple cycles
+		- TEst execution phase consists executing the test cases + test scripts (if automation)
+
+Defects / Bugs
+--------------
+ - Any mismatched functionality found in a application is called ar Defect/Bug/Issue
+ - During Test execution test engineers are reporting mismatches as defects to developers through templates or using tools
+ - Defect Reporting Tools:
+ 	1. Clear Quest
+ 	2. DevTrack
+ 	3. Jira
+ 	4. Quality Center
+ 	5. Bug Jilla etc.		
+
+
+Defect Report content:
+---------------------
+- Defect_id [unique identification], 
+- defect description [detailed description of the defect including information about the modules in which defect was found],
+- version [version of the application in which defect was found],
+- Steps [detailed steps along with screenshots with which the developer can reproduce the defects],
+- data Raised [Date when the defect is raised], 
+- References  [where you provide references document like requirement design, architechture, or may be even schrrenshots of the error to help understand the defect],
+- Detected by [Name/Id of the tester who raised the defect],
+- Status [Status of the defect, more on this later],
+- Fixed by [NAme/ID of the developer who fixed it],
+- Data closed [Date when the defect is closed], 
+- Severity [describes the impact of the defect on the application],
+- Priority [which is related to defect fixing urgency, seeverity priority could be High/Medium/Low based on the impact urgency at which the defect should be fixed respectively]
+
+Defect classification
+--------------------
+[Severity] -----> Severity describes the seriouness of defect ans how much impact on business workflow
+	1. Blocker - this defect indicates nothing can proceed further Ex. Application crashed, Login not worked
+	2. Critical	- The main/basic functionality is not working. customer business workflow is broken. They cannot proceed further.
+		Ex. Fund transfer is not working in net banking, Ordering product in ecommerce application is not working
+	3. Major - It cause some undesirable behaviour, but the feature/ application is still functional 
+		Ex. After sending email there is no confirmation, after booking cab there is no confirmation 
+	4. Minor - It won't cause any major break-down of the system
+		Ex. Look and fell issues, spellings, alignment
+	
+[Priority] -----> describes the important of defect, States the order in which a defect should be fixed
+	1. P1 (HIGH) - The defect must be resolved immediately as if affects the system severly and cannot be used until it is fixed
+	2. P2 (MEDIUM) - it can wait until a new version/builds is created
+	3. P3 (LOW) - Developer can fix it in later releases	
+
+[ EX: ]-----------------------------------------
+1. High severity and High Priority
+	- Login is taking to the blank page
+	- Issuse with login functionality (user in not able to login to the application)
+	
+2.High severity and Low Priority
+	- About us link is going to blank page
+	- Slight change in logo color or spelling mistake in company name
+	- Web page not found when user clicks on a link (user does not visit that page generally)
+	
+3. Low severity and High Priority
+	- After user is logged into application, he can see Home page. But there is spelling mistake in Home page
+	- Application crashing in some very corner case
+	
+4. Low severity and Low Priority
+	- User opened contact page, Email ID has spelling mistake.
+	- A spelling mistake in a page not frequntly naviagted by users
+	- Any cosmetic or spelling issues which is within a paragraph or in the page
+	
+	
+Defect Resolution
+-----------------
+	- After receiving the defect report from the testing team, development team conduct a review meeting to fix defects.
+		Then they send a resolution type to the testing team for further communication.
+
+Resolution types:
+--------------
+1. Accept
+2. Reject
+3. Duplicate
+4. Enhancement
+5. Need more information
+6. Not Reproduible
+7. Fixed
+8. As Designed.			
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
