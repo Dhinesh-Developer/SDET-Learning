@@ -1,0 +1,98 @@
+
+--------- BUG LIFE CYCLE ------------
+IMAGE find in google and understand.
+
+Test cycle closure [last phase of STLC life cycle]
+------------------
+	- Evaluate cycle completion criteria based on time, test coverage, Cost, software, ciritcal business objectivies, Quality
+	- prepare test metric based on the above parameters
+	- Document the learning out of the project
+	- Prepare test summary out of the project
+	- qualitative and quantative reporting of quality of the work product to the customer
+	- test result analysis to find out the defect distribution by type and severity
+	
+	Deliveralbes:
+	----------
+		- Test closure report
+		- Test metrics
+
+TEst MEtrics -> required data
+------------
+1. No of requirements
+2. Avg no. of test cases written per requirement
+3. Total no. of test cases written for all requirement
+4. total no. of test cases executed
+5. No.of test cases passes
+6. No.of test cases failed
+7. No. of test cases blocked
+8. No. of test cases un executed
+9. Total no.of defects identified
+10. Critical defects count
+11. Higher defects count
+12. Medium defects count
+13. Low defects count
+14. customer defects
+15. No. of defects found in UAT
+
+TEst metrics
+------------
+1. % of Test cases Executed: 
+	(No.of test cases executed/ Total no. of test cases written) * 100
+2. % of Test cases NOT Executed: 
+	(No.of test cases NOT executed/ Total no. of test cases written) * 100
+3. % of Test cases passed: 
+	(No.of test cases passes/ Total test cases executed) * 100
+4. % of Test cases failed: 
+	(No.of test cases failed/ Total test cases executed ) * 100
+5. % of Test cases blocked: 
+	(No.of test cases blocked/ Total Test cases executed) * 100
+
+TEst metrics
+------------
+1. Defect Density: Number of defects identified per requirement/s
+	No.of defects found/ Size (No.of requirements)
+2. Defect Removal/ Efficieny (DRE):
+	(A/A+B) * 100
+	(fixed defects/ (Fixed defects + Missed defects) * 100)	
+		- A = Defects identified during testing/ fixed defects
+		- B = Defect identified by the customer/missed defects
+3. Defect leakage:
+	(No. of defects found in UAT/ No.of defects found in TEsting) * 100
+4. Defect Rejection Ratio:
+	(No.of defect rejected/ Total No.of defects raised) * 100
+5. Defect Age: Fixed date-reported date
+6. Customer satisfaction - No.of complaints per period of time				
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+QA/ Testing Activities
+----------------------
+1. understanding the requiements and functional specifications of the application.
+2. Identifying required TESt scenario's
+3. Designing Test cases to validate application
+4. Setting up test environment (TEST BED)
+5. Execute test cases to valid application
+6. Log Test results (How many test cases pass/fail)
+7. Defect reporting and tracking
+8. Retest fixed defects of previous build
+9. Perform various types of testing's in application
+10. Reports to test lead about the status of assigned tasks
+11. Participated in regular team meetings
+12. Creating automation scripts
+13. Provides recommendation on whether or not the application/ system is ready for production
+
+
+7 principles of software testing:
+-------------------------------
+1. start software testing at early stages. means from the beginning when you get the requirements
+2. Test the software in order to find the defects
+3. Highly impossible to give the bug free software to the customer
+4. Should not do exhaustive testing. means we should not use same types of data for testing every time
+5. Testing is context based. Means decide what types of testing should be conducted based on type of application
+6. We should follow the concept of pesticide paradox, MEans if you are executing same cases for longer run,
+	they wont be find any defects. WE have to keep update test cases in every cycle/release in order to find more defects
+7. We should follow defect clustering. Means some of the modules contains most of the defects.
+	By experience, we can identify such risky modules. 80% of the problems are found in 20% of the modules.	
+
+
+
