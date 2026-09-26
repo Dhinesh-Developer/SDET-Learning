@@ -6,7 +6,7 @@
 2. Usability testing
 3. Functional testing
 4. Non- functional testing
-
+----------------------------------------------------------------------------------------------------------------------
 --- [ GUI Testing checklist ] 
 - Testing the size,position,width,height of the elements
 - Testing of the error messages that are getting displayed.
@@ -26,24 +26,47 @@
 - Testing of the heading whether if is properly aligned or not
 - Testing of the color of the hyperlinked
 - Testing UI elements like button, textbox, text area, check box, radio buttons, drop downs, links etc
-
+------------------------------------------------------------------------------------------------------------------------
 --- [Usability Testing]
 	- During the testing validates application provided context sensitive help or not to the user
 	- Checks how easily the end users are able to understand and operate the application os called usablitiy testing.
-	
+----------------------------------------------------------------------------------------------------------------------------	
 --- [Functional Testing]	
 	- Funtionality is nothing but behaviour of appliation
 	- Functional Testing talks about how your feature should work
 
-- Object properties testing -> check the properties of objects present on the application -> ex. enabled, disable, visible, Focus..
-- Database testing/ Backend testing -> DML operations (insert,update,delete,select)  -> GREY box testing [combination of black box and white box testing]
+1. Object properties testing -> check the properties of objects present on the application -> ex. enabled, disable, visible, Focus..
+2.Database testing/ Backend testing -> DML operations (insert,update,delete,select)  -> GREY box testing [combination of black box and white box testing]
 	table level validation [column type,column length, number of cols in data etc], relationship validation [normalization],procedures , function, trigger testing, views, index etc. 
-- Error handling ->  tester verify the error messages while performing incorrect actions on the application. error messages should be readle,user understandable/Simple language.
-- Calculations/ Manipulations testing -> tester should verify the calculations.  ex. BANk -> withdraw, deposit, check balance -> calculations testing
-- Links existence & links execution -> where exactly the links are placed, links are navigating to proper page or not --> Internal links, External links, Broken Links
-- Cookies and sessions -> 
-	
+3.Error handling ->  tester verify the error messages while performing incorrect actions on the application. error messages should be readle,user understandable/Simple language.
+4. Calculations/ Manipulations testing -> tester should verify the calculations.  ex. BANk -> withdraw, deposit, check balance -> calculations testing
+5. Links existence & links execution -> where exactly the links are placed, links are navigating to proper page or not --> Internal links, External links, Broken Links
+6. Cookies and sessions -> cookies are temporaray file created by browser while browsing the pages through internet, sessions are time slots created in server side.
+	sessions will be expired after some time (If you are idle for some time)
+---------------------------------------------------------------------------------------------------------------------	
+---- [Non-funtional testing]
+	- Once the apllication functionality is stable then we do non-functional testing
+	- Focus on performance, load it can take and security etc.
 
+1. Performance testing  [load testing,stress testing, volume testing]
+	- speed of the application
+	Load - gradually Increase the load on the application slowly then check the speed of the application
+	Stress - suddenly increase/decrease the load on application and check the speed of the application
+	Volume - Check how much data is able to handle by the application.
+	
+2. Security testing - How secure our application
+	Authentication	-	Users are valid or not
+	Authorization/ Access control - permission of the valid user
+3. Recovery testing - Recovery checks the system change abnormal to normal
+4.Compatibility testing - 
+	- forward compabiltity 
+	- backward compability
+	- Hardware compability - configuration testing
+5. Configuration testing
+6.Installation testing - check screens are simplar to understand. Simple or not. Un-installation . Screen navigation
+7. Sanitation/Garbage testing - if any application provides extra features/ functionality then we consider them as bug.
+		
+	
 
 
 
