@@ -1,0 +1,75 @@
+
+----------------------------------- STLC (software testing life cycle) ----------------------------
+1. Requirement analysis
+2. Test planning
+3. Test Design
+4. Test execution
+5. Defect reporting/ Bug reporting & Tracking
+6. Test cycle closure
+
+
+[1. Test planning]
+-----------------
+ 	phase - what to test, how to test, when to test
+ 	input - project plan, functional requirement
+ 	activities ->
+ 		1. Identify the resources
+ 		2. team foundataionu
+ 		3. test estimation
+ 		4. Preparation of test plan
+ 		5. reviews on test plan
+ 		6. Test plan sign off
+ 	responsibilities - Test lead/ team lead(70%), Test Manager(30%)
+ 	outcome - Test plan document
+ 	
+[2. Test Designing]
+-----------------
+ 	phase - 
+ 	input - project plan, functional requirement, test plan, design docs, use cases
+ 	activities ->
+ 		1. preparation of test scenarios
+ 		2. preparation of test cases
+ 		3.	reviews ot test cases
+ 		4. Traceability matrix
+ 		5. Test case signoff
+ 	responsibilities - Test lead/ team lead(30%), Test Engineers(70%)
+ 	outcome - Test cases document, Traceability matrix
+ 	
+
+[3. Test Execution]
+-----------------
+ 	phase - 
+ 	input - functional requiements, test plan, test cases, build from development teams
+ 	activities ->
+ 		1.executing test cases, 
+ 		2.preparation of test report,
+ 		3.test log, 
+ 		4.identifying defects
+ 	responsibilities - Test lead/ team lead(10%), Test Engineers(90%)
+ 	outcome - status/ test reports
+ 	
+
+[4. Defect Reporting & Tracking]
+-----------------
+ 	phase - 
+ 	input - test cases, Test reports/ test log
+ 	activities ->
+ 		1. Prepartion of defect report
+ 		2. Reporting defects to Developers
+
+ 	responsibilities - Test lead/ team lead(10%), Test engineers(90%)
+ 	outcome - defect report
+ 	
+[5. Test closure/ sign-off]
+-----------------
+ 	phase - 
+ 	input -  test reports/ Defect reports
+ 	activities ->
+ 		1. Analyzing test reports
+ 		2. Analyzing bug reporting
+ 		3. Evalutaing exit criteria
+
+ 	responsibilities - Test lead/ team lead(70%), Test Engineer(30%)
+ 	outcome - Test summary reports
+ 	
+
