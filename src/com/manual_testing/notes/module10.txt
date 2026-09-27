@@ -36,11 +36,14 @@ Customer : opencart
 -> FRS document
 -> Estimation
 -> Test plan documents
-	
-	
-	
-	
-	
+
+
+XAMMP [control panel]	-> manages both the below things
+1. Mysql Database	
+2. Apache server
+
+https://www.opencart.com/index.php?route=cms/download
+https://www.apachefriends.org/	
 	
 	
 	
