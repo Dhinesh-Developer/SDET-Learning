@@ -1,0 +1,547 @@
+
+Overview:
+    opencart is free open source e-commerce platform for online merchants. Opencart provides a professional and reliable foundataion from
+    which to build a sucessful online store. the foundataion appeals to a wide varity of users; ranging from seasoned web developers looking for a user-friendly interface to user,
+    to shop owners just launching thier business online for the first time.
+
+Requirements:
+    opencart requires certain technical Requirements to met for the store to opearate properly,
+    First a web server, must be created to make the Opencart store publicly available on the web.
+    Domain names and hosting services can easily be purchased for an affordable price.
+        
+    when selecting a hosting service, You should check to see that these server Requirements are provided
+    and installed on their web servers
+    
+    These extensions must be enabled for opencart to install properly on the web server
+        .PHP 5.4
+        .JQuery 2.1.1
+        . Javascript
+        . Database (MYSQL suggested)
+        . Web server (Apache suggested)
+
+Yes. **Use the OpenCart demo as your SDET practice project.** That's actually a better choice than the artificial banking example because you can inspect the real UI, understand real user flows, and eventually automate the same flows.
+
+I checked the OpenCart demo page. It provides both a **Store Front** and an **Administration** demo, and the current demo page states that the demo credentials are `demo` / `demo`. ([OpenCart][1]) OpenCart's documentation also describes the platform as an e-commerce system with product, customer, order, payment, catalog, extension, and administration functionality. ([OpenCart Documentation][2])
+
+[OpenCart Demo](https://www.opencart.com/index.php?route=cms%2Fdemo&utm_source=chatgpt.com)
+
+## First: don't make one giant FRS
+
+This is the mistake I want you to avoid.
+
+OpenCart has a **Store Front** and an **Administration** side. ([OpenCart][1])
+
+So we'll structure your project like this:
+
+```text
+                 OPENCART
+                    │
+          ┌─────────┴─────────┐
+          │                   │
+     STORE FRONT          ADMIN PANEL
+     Customer Side        Administrator Side
+          │                   │
+     ┌────┴────┐         ┌────┴─────┐
+     │         │         │          │
+  Account   Shopping   Catalog    Sales
+            Cart
+     │         │         │          │
+  Login     Product    Products    Orders
+  Register  Search     Categories  Customers
+  Logout    Cart       Options     Returns
+            Checkout   etc.
+```
+
+That gives us a **real SDET-sized project**.
+
+---
+
+# Our OpenCart FRS
+
+We'll create:
+
+### Document
+
+**OpenCart E-Commerce Application – Functional Requirements Specification**
+
+### Document ID
+
+`FRS-OC-001`
+
+### Version
+
+`1.0`
+
+### Application
+
+**OpenCart**
+
+### Application Type
+
+**E-Commerce Web Application**
+
+### Primary Actors
+
+* Customer
+* Administrator
+
+---
+
+# 1. Introduction
+
+## 1.1 Purpose
+
+The purpose of this Functional Requirements Specification is to define the functional behavior of the OpenCart e-commerce application, including customer-facing shopping functionality and administrative store-management functionality.
+
+The document will provide the functional requirements necessary for understanding, designing, testing, and validating the application's expected behavior.
+
+---
+
+# 2. Scope
+
+This is where we define **what we are going to test**.
+
+For your SDET project, I recommend starting with the following scope.
+
+## 2.1 Store Front
+
+### Customer Account
+
+```text
+FR-ACC
+├── Registration
+├── Login
+├── Logout
+├── Forgot Password
+├── Account Information
+├── Address Book
+└── Password Change
+```
+
+### Product
+
+```text
+FR-PROD
+├── Product Listing
+├── Product Search
+├── Product Details
+├── Product Images
+├── Product Options
+├── Product Price
+└── Product Availability
+```
+
+### Shopping Cart
+
+```text
+FR-CART
+├── Add Product
+├── Update Quantity
+├── Remove Product
+├── View Cart
+└── Cart Total
+```
+
+### Checkout
+
+```text
+FR-CHK
+├── Checkout
+├── Customer Information
+├── Billing Address
+├── Shipping Address
+├── Shipping Method
+├── Payment Method
+├── Order Confirmation
+└── Order Placement
+```
+
+### Orders
+
+```text
+FR-ORD
+├── Order History
+├── Order Details
+└── Order Status
+```
+
+---
+
+# 3. Administration
+
+OpenCart's administration interface is used to manage things such as products, customers, orders, payments, and store configuration. ([OpenCart Documentation][2])
+
+So we'll have:
+
+```text
+FR-ADMIN
+│
+├── Dashboard
+├── Catalog
+│   ├── Categories
+│   ├── Products
+│   ├── Manufacturers
+│   ├── Options
+│   └── Attributes
+│
+├── Customers
+│
+├── Sales
+│   ├── Orders
+│   ├── Returns
+│   └── Customers
+│
+├── Extensions
+│
+├── System
+│   ├── Settings
+│   ├── Users
+│   └── Maintenance
+│
+└── Reports
+```
+
+The exact modules exposed by the current demo can change with the OpenCart version/configuration, so **don't blindly copy every item from an old tutorial**. OpenCart's current documentation should be your reference when the demo UI and older material disagree. ([OpenCart Documentation][2])
+
+---
+
+# 4. Now the important part: Functional Requirements
+
+This is where I want you to learn properly.
+
+Don't write:
+
+> "Login page should work."
+
+That's **not a professional requirement**.
+
+Instead:
+
+## FR-ACC-001 — Customer Login
+
+**Description**
+
+The system shall allow a registered customer to authenticate using valid email address and password.
+
+### Preconditions
+
+1. Customer account must exist.
+2. Customer must be on the login page.
+3. Customer account must be eligible for login.
+
+### Expected Behavior
+
+When valid credentials are submitted:
+
+```text
+Email
+   +
+Password
+   ↓
+Submit
+   ↓
+System validates credentials
+   ↓
+Successful authentication
+   ↓
+Customer account/session established
+```
+
+### Validation
+
+The system should validate:
+
+* Email is provided.
+* Password is provided.
+* Email format is valid.
+* Credentials are valid.
+
+### Negative Behavior
+
+The system should appropriately handle:
+
+* Invalid email.
+* Invalid password.
+* Empty email.
+* Empty password.
+* Invalid email format.
+* Non-existing account.
+
+---
+
+# 5. Requirement ID System
+
+We're going to use a professional naming convention.
+
+```text
+FR-ACC-001
+```
+
+means:
+
+```text
+FR     → Functional Requirement
+ACC    → Account Module
+001    → Requirement number
+```
+
+For example:
+
+| Requirement ID | Feature               |
+| -------------- | --------------------- |
+| FR-ACC-001     | Customer Login        |
+| FR-ACC-002     | Customer Registration |
+| FR-ACC-003     | Customer Logout       |
+| FR-ACC-004     | Forgot Password       |
+| FR-ACC-005     | Account Information   |
+| FR-PROD-001    | Product Search        |
+| FR-PROD-002    | Product Details       |
+| FR-CART-001    | Add Product to Cart   |
+| FR-CART-002    | Update Cart           |
+| FR-CART-003    | Remove Product        |
+| FR-CHK-001     | Checkout              |
+| FR-CHK-002     | Shipping Method       |
+| FR-CHK-003     | Payment Method        |
+| FR-CHK-004     | Place Order           |
+| FR-ORD-001     | Order History         |
+
+This will become extremely useful later when we create **Traceability Matrix**.
+
+---
+
+# 6. Let's take a real OpenCart feature
+
+Suppose you're looking at the Store Front.
+
+You see:
+
+```text
+Search
+   ↓
+Enter product name
+   ↓
+Search
+   ↓
+Product results
+```
+
+We don't immediately write Selenium.
+
+First:
+
+### FR-PROD-001 — Product Search
+
+**Requirement**
+
+> The system shall allow customers to search for products using a product name or relevant search keyword.
+
+### Preconditions
+
+* Store Front is accessible.
+* Search functionality is available.
+
+### Input
+
+```text
+Search Keyword
+```
+
+### Expected Behavior
+
+When a valid keyword is entered, the system should display products relevant to the search criteria.
+
+### Negative Cases
+
+What if the customer enters:
+
+```text
+Empty string
+Random keyword
+Special characters
+Very long keyword
+Partial product name
+Uppercase keyword
+Lowercase keyword
+```
+
+Now you're beginning to think like a tester.
+
+---
+
+# 7. Another real feature — Add to Cart
+
+### FR-CART-001 — Add Product to Cart
+
+**Requirement**
+
+> The system shall allow a customer to add an available product to the shopping cart.
+
+### Preconditions
+
+* Product exists.
+* Product is available for purchase.
+* Store Front is accessible.
+
+### Process
+
+```text
+Product Listing
+      ↓
+Select Product
+      ↓
+Product Details
+      ↓
+Select required options
+      ↓
+Add to Cart
+      ↓
+Cart updated
+```
+
+### Expected Result
+
+The selected product should be added to the customer's shopping cart with the applicable quantity, options, and price.
+
+### Business Rules
+
+The system should consider:
+
+* Product availability
+* Quantity
+* Product options
+* Product price
+* Stock availability
+
+---
+
+# 8. Now here is where SDET becomes interesting
+
+Suppose requirement says:
+
+> Customer can add product to cart.
+
+A beginner writes:
+
+```text
+Test Add Product
+```
+
+A proper SDET asks:
+
+### What exactly can go wrong?
+
+```text
+1. Add one product
+2. Add multiple products
+3. Add same product twice
+4. Add unavailable product
+5. Add product with options
+6. Change quantity
+7. Remove product
+8. Refresh page
+9. Logout/login
+10. Cart persistence
+```
+
+And then:
+
+### Boundary testing
+
+```text
+Quantity = 0
+Quantity = 1
+Quantity = maximum allowed
+Quantity > maximum allowed
+Negative quantity
+```
+
+This is why **FRS is the foundation of testing**.
+
+---
+
+# 9. Your FRS hierarchy
+
+For OpenCart, we're going to eventually build this:
+
+```text
+FRS
+│
+├── 1. Introduction
+│
+├── 2. Scope
+│
+├── 3. Actors
+│
+├── 4. Store Front
+│   │
+│   ├── Account
+│   │   ├── Registration
+│   │   ├── Login
+│   │   └── Logout
+│   │
+│   ├── Product
+│   │   ├── Search
+│   │   ├── Listing
+│   │   └── Details
+│   │
+│   ├── Cart
+│   │   ├── Add
+│   │   ├── Update
+│   │   └── Remove
+│   │
+│   └── Checkout
+│       ├── Address
+│       ├── Shipping
+│       ├── Payment
+│       └── Order
+│
+└── 5. Administration
+    │
+    ├── Dashboard
+    ├── Catalog
+    ├── Customers
+    ├── Sales
+    ├── Extensions
+    ├── System
+    └── Reports
+```
+
+---
+
+# 10. And eventually your SDET project becomes this
+
+This is the part I want you to understand **before you start writing the FRS**.
+
+```text
+                 OpenCart FRS
+                      │
+                      ↓
+             Functional Requirements
+                      │
+                      ↓
+                Test Scenarios
+                      │
+                      ↓
+                 Test Cases
+                      │
+          ┌───────────┴───────────┐
+          ↓                       ↓
+      Manual Test             Automation
+                                  │
+                          ┌───────┴────────┐
+                          ↓                ↓
+                       Selenium         API Testing
+                          │                │
+                         Java          REST Assured
+                          │
+                      TestNG/JUnit
+                          │
+                         Maven
+                          │
+                    Page Object Model
+                          │
+                     Test Reports
+                          │
+                         CI/CD
+```
+
