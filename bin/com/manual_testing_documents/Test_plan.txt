@@ -1,0 +1,227 @@
+total : 7 pages [approx]
+
+TEST_PLAN
+----------
+product Name : (OpenCart)
+
+Tables of content:
+1.Overview
+2. Scope
+    - Inclusions
+    - Test Environment
+    - Exclusioms
+3. Test strategy
+4. Defect reporting procedure
+5. Roles/ Responsibilities
+6. Test schedule
+7. Test deliverables
+8. Pricing
+9. Entry and exit criteria
+10. Suspension and resumption criteria
+11. Tools
+12. Risks and Mitigations
+13. Approvals    
+
+----------------------------------
+Overview:
+---------
+    opencart is free open source e-commerce platform for online merchants. Opencart provides a professional and reliable foundataion from
+    which to build a sucessful online store. the foundataion appeals to a wide varity of users; ranging from seasoned web developers looking for a user-friendly interface to user,
+    to shop owners just launching thier business online for the first time.
+
+
+Scope:
+------
+    the scope of the project includes testing the following features of 'https://demo.opencart.com/' web application
+
+    Inclusions:
+        - register
+        - Login & Logout
+        - Forgot password
+        - Search
+        - Product Compare
+        - Product display page
+        - Add to cart
+        - Wish list
+        - shopping cart
+        - Currencies
+        - Home page
+        - Checkout page
+        - My accout page
+        - Order history page
+        - Downloads page
+        - Contact us page
+        - Menu options
+        - Footer options
+        - Category pages
+
+    Test Environment:
+        - Windows 10 -chrome, firefox, and Edge
+        - MAC os - safari browswer
+        - Andriod mobile os - chrome
+        - Iphone mobile os - safari
+
+    Exclusions:
+        - All the features except that are mentioned under 'Inclusions'
+        - any third-party features or payment gateway
+        - Test Automation    
+
+TESt Strategy:
+--------------
+    'pavan' has communicated with 'OpenCart' ans has understood that e need to perform functional testing
+    of all the functionality mentioned in the above scope section.
+    As part of functional testing, we will follow the below approach for TEsting:
+
+    Step #1: - creation fo test scenarios and test cases for the different features in scopes.
+        - we will apply several test designing techniques while creating test cases 
+            - Equilvances class partition
+            - Boundary value Analysis
+            - Decision Table testing
+            - State transition testing
+            - use case testing
+        - we also use out expertise in creating test cases by apllying the below:
+            - Error guessing
+            - exploratory testing
+
+    Step #2: - our testing process, when we get an application for testing:
+        - Smoke testing
+        - sanity testing
+        - regression testing
+        - Retesting
+        - usability
+        - functional
+        - UI testing
+
+    Step #3:  - we will follow below best pratices to make out testing better:
+        - context driven testing
+        - shift left testing
+        - exploratory testing
+        - end to end testing
+
+Defect reporting procedure:
+---------------------------
+    During the testing execution-
+        - Any deviation from excepted behavior by the application will be noted, if
+            it can't be reported as a defect, it'd be reported as an observation/issue of posed as a question
+        - Any usability issues will also be reported
+        - After discovery of a defect, it will be retested to verify reproduibity of the
+            defect, Screenshot with steps to Reproduce are documented
+        - Every day, at the end of the test execution, defects encountered will be 
+            sent along with the obeservations
+    Note:
+        - defects will be documented in a Excel
+        - Test scenarios and test cases will be documented in an excel document                
+
+
+Roles/ Responsibilities:
+-----------------------
+
+    [Name]                              [role]                                       [Responsibilities]
+    Person A                         Test Manager                                Escalations
+    Person B                         Test Lead                                   create the test plan and get the client signoff,interact with application, create and execute the test cases, report defects, coordinate the test execution, verify validity of the defects being reported, submit daiky issues updated and summary defect reports to the client, attend any meeting with client
+    Person C                         Senior Test, Engineer                    interact with application, create and execute the test cases, report defects
+    PErson D                         test engineer                              interact with the application, execute the test caess, report defects
+                                                                                
+
+TEst schedule:
+--------------
+ following is the test schedule planned for the project
+
+      [TASK]                                       [TIME Duration]
+      creating test plan                        start date and end date
+      test case creation                        start date and end date
+      test case execution                       start date and end date
+      summary reports submission                start date and end date
+
+
+
+Test deliverables:
+-----------------
+    The following are toe be delivered to the client
+
+    [deliverables]                                     [Description]                                  [Target completion date]
+    Test plan                           details on the scope of the project,                           Date
+                                        test strategy, test schedule, resource 
+                                        requirements, test deliverables and schedule
+    fucntional test cases               test cases created for the scope defined                       Date
+    Defect reports                      Detailed Description of the defects                            Date                     
+                                        identified along with screenshots and steps to 
+                                        reproduce on a daily basis
+    Sumamry reports                     Summary reports, bugs by byg. bugs by functional
+                                        area and bugs by priority                                    
+                                       
+                                 
+
+Pricing:
+-------
+    Not applicable here
+
+
+Entry and Exit criteria:
+-----------------------
+    the below are the entry and exit criteria for every phaseof software testing life cycle:
+
+    - requirement Analysis:
+        entry criteria:
+            once the testing team receives the requirement documents or details about the project
+        exit criteria:
+            list of requirement are explored and understood by the testing team , doubts are cleared
+    - Test planning
+        entry criteria:
+            testable requirement derived from the given requirement document or project details
+            doubts are cleared
+        exit criteria:
+            test plan docuemnt (include test strategy) is signed-off by the client
+    - Test designing:
+        entry criteria:
+            test plan document is signed-off by the client
+        exit criteria:
+            test scenarios and test cases docuemnt are signed-off by the client
+    - Test execution:
+        entry criteria:
+            test scenarios and test cases documents are signed-off by the client
+            application is ready for testing
+        exit criteria:
+            test case reports, defect reports are ready
+    - Test closure:
+        entry criteria:
+            test case reports, defect reports are ready
+        exit criteria:
+            test summary reports
+
+
+Suspension and resumption criteria:
+----------------------------------
+    Based on the client Decision, we will suspend and resume the project
+    we will ramp up and ramp down the resources as per client needs
+
+Tools:
+-------
+    the following are the list of tools we will be using in this project:
+        - XYZ bug tracking tools
+        - Mind map tools
+        - snipping screenshots tools
+        - Word and excel document
+
+risks and Mitigations:
+----------------------
+    the following are the list of risks possible and the ways to Mitigatte them:
+
+    Risk: Non-availability of a resource
+    Mitigations: backup resource planning
+
+    Risk: Build URL is not working
+    Mitigations: resources will work on other tasks
+
+Approvals:
+----------
+    Team will send different types of docuemnts for client approval like below:
+        - TEst plan
+        - Test scenarios
+        - Test cases
+        - Reports
+    Testing will only continue to the next steps once these approvals are done.        
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
