@@ -1,0 +1,14 @@
+
+WebDriver Methods - 
+    --- Types of wait method
+
+wait methods:
+------------
+
+Synchronization:
+----------------
+
+
+
+
+

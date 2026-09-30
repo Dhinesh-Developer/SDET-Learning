@@ -46,3 +46,10 @@ syntax:
 //img[@title='MacBook']
 
 
+xpath with 'and' 'or' operators
+//input[@name='search' and @placeholder='search']
+
+// input[@name='search' or @placeholder='search']
+
+
+
