@@ -48,7 +48,3 @@ xml: Structure:
     </test>
 <suite/>            
 
-
-
-
-

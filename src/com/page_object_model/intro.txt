@@ -1,0 +1,17 @@
+Page object Model Pattern [Page Factory]- is a Design pattern
+
+Test case
+---------
+locaters
+test method --- code --- validation+actions
+
+problems without POM:
+1. Dupliacate of elements locaters
+2. Updation
+
+Approaches to create page object classes:
+-----------------------------------------
+1. without using PageFactory
+2. using PageFactory
+
+
