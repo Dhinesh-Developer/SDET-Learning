@@ -1,0 +1,119 @@
+
+TDD - Test Driven Development -
+    - Technical part
+
+    Ex: Junit/TestNG (for java),
+        NUnit (for .NET),
+        PyTest (for python), 
+        Jasmine (for JavaScript)
+
+
+BDD - Behavioural Driven Development -
+    - User Acceptance test cases
+    - testing the behviour of the application
+
+   Ex:  Cucumber (supports multiple languages like Java, Ruby, JavaScript etc.,)
+        SpecFlow (for .NET)
+        Behave(for python)
+        JBehave (for java) 
+
+Team:
+----
+- stakeholders/customer (non-tech)
+- product manager - (non-tech)
+- project manager - (non-tech)
+- developer - tech
+- tester - tech
+- scrum master - (non-tech)
+
+BDD:
+----
+ -> BDD or Behaviour-Driver-Development, emphasizes collabration between technical and non-technical stakeholders
+ through the use of a common language to describe the behaviour of a system.
+ -> It focuses on writing tests in a human-readable format, typically using a "given-when-then" structure, which helps
+ clarify requirements and expectations.
+
+
+Cucumber:
+----------
+1. Feature File - 
+    - feature file
+    - Extension is .feature 
+    - it contains scanerio and steps
+
+Gherkin - language contains keywords..
+Scenario
+Given 
+When 
+Then 
+And 
+
+test cases contains:
+------------------
+Pre-condition - Given
+Actions - When
+Validations - Then
+
+
+2. Step definition File
+    - step definition file
+    - Extension is .java
+    - contains the methods
+
+
+3. Test Runner File
+    - Extension is .java
+    - Feature file path Ex: c;//Login_feature
+
+
+Login.feature:
+---------------
+
+Feature: User login
+
+    Scenario: Successful login 
+            Given the user opens application
+            And the user navigate to login page
+            When the user entered valid user name and valid password
+            And the user clicked on submit button.
+            Then the user should see My account page.
+
+Step definition file:
+----------------------
+    - Contains methods which are represent to steps in feature file
+
+testRunner class ---> feature file, steps, report etc...
+
+
+Cucumber project setup:
+-----------------------
+1. Install Cucumber eclipse plugin (from eclipse market place)
+
+2. Add dependencies in pom.xml
+
+<!-- Source:
+		https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>7.33.0</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Source:
+		https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>7.33.0</version>
+			<scope>test</scope>
+		</dependency>
+
+3. update pom.xml
+
+
+
+
+
+
+
