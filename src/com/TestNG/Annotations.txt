@@ -1,0 +1,54 @@
+Annotations:
+-----------
+
+@Test
+
+@BeforeMethod
+@AfterMethod
+
+@BeforeClass
+@AfterClass
+
+@BeforeTest
+@AfterTest
+
+@BeforeSuite
+@AfterSuite
+
+
+TC1:
+----
+1. Login ---> @BeforeMethod
+2. search ---> @Test
+3. Logout ---> @AfterMethod
+4. Login  
+5. Adv search ---> @Test
+6. Logout 
+
+TC2:
+----
+1. Login ---> @BeforeClass
+2. search ---> @Test
+3. Adv search ---> @Test 
+4. Logout ---> AfterClass
+
+xml: Structure:
+----
+
+<suite name="mysuite">
+    <test name="mytest">
+        <classes>
+            <class name="xyz"/>
+        <classes>
+    </test>
+    <test name="mytest">
+        <classes>
+            <class name="abc"/>
+        <classes>
+    </test>
+<suite/>            
+
+
+
+
+

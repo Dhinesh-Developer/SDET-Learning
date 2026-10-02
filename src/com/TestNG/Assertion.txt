@@ -1,0 +1,10 @@
+Assertion - Validation point
+
+2 kinds of assertions:
+---------------------
+
+1. Hard assertions [important]
+2. soft assertions
+
+
+

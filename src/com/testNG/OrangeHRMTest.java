@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
  * 2. test to presence
  * 3. Login
  * 4. close
-
  * */
 
 public class OrangeHRMTest {
