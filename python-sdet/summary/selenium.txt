@@ -1,0 +1,30 @@
+Selenium WebDriver
+is a browser automation tool used to automate web application interactions, such as clicking buttons, entering text, navigating pages and verifying displayed results.
+
+pip install selenium
+google-chrome --version
+
+Step 2: main selenium Methods
+
+webdriver.Chrome() = start chrome
+driver.get(url) = open a webpage
+driver.title = Read the page title
+find_element() = Find one element 
+find_elements() = find multiple elements 
+send_keys() = Enter text 
+click() = Click an element
+clear() = clear a field
+get_attribute() = read an HTML attribute 
+quit() = close the browser session
+
+step 3: Locators
+
+ID = By.ID  "username"
+Name = By.Name, "email"
+class name = By.CLASS_NAME "search-box"
+CSS Selector = By.CSS_SELECTOR, "#username"
+XPath = By.XPATH, "//button[@type='submit']"
+Link text = By.LINK_TEXT, "Login"
+
+
+
