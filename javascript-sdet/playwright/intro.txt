@@ -1,0 +1,56 @@
+Playwright
+is a browser automation framework developed by Microsoft.
+ It supports Chromium, Firefox and WebKit.
+
+For SDET, it can automate:
+
+Web application login and registration
+Search and shopping workflows
+Form validation
+Browser interactions
+End-to-end user journeys
+API testing
+
+
+5.2 Playwright setup on Ubuntu:
+-------------------------------
+
+Open your terminal.
+Step 1: Create a project
+
+mkdir playwright-sdet
+cd playwright-sdet
+
+Step 2: Initialize npm
+
+npm init -y
+
+Step 3: Install Playwright Test
+
+npm init playwright@latest
+
+During setup, select:
+JavaScript
+tests as the test folder
+Add a GitHub Actions workflow if you want CI
+Install Playwright browsers
+
+--------------------------------------------------------------------------
+
+If you prefer installing the dependencies manually:
+
+npm install -D @playwright/test
+npx playwright install
+
+Step 4: Verify installation
+
+npx playwright --version
+npx playwright test --list
+
+Step 5: Run the initial tests
+
+npx playwright test
+
+Step 6: View the HTML report
+
+npx playwright show-report
