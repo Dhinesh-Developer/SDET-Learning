@@ -1,0 +1,86 @@
+Step 1: Install the plugin
+pip install pytest-html
+
+Step 2: Run your test suite
+pytest -v \
+  --html=reports/report.html \
+  --self-contained-html
+
+The report will be generated at:
+
+reports/report.html
+
+Open it in your browser.
+
+
+Ex 1: Generate a basic report
+
+pytest tests/test_basic.py \
+    -- html=reports/basic.html \
+    -- self-contained-html
+------------------------------------
+    (.venv) dhinesh@Arise:~/eclipse-workspace/SDET/python-sdet$ pytest tests/test_basic.py \
+  --html=reports/basic.html \
+  --self-contained-html
+=============================== test session starts ===============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0
+rootdir: /home/dhinesh/eclipse-workspace/SDET/python-sdet
+plugins: metadata-3.1.1, html-4.2.0
+collected 3 items                                                                 
+
+tests/test_basic.py ...                                                     [100%]
+
+- Generated html report: file:///home/dhinesh/eclipse-workspace/SDET/python-sdet/reports/basic.html -
+================================ 3 passed in 0.02s ================================
+
+
+Ex 2: Generate a smoke-test report
+
+pytest tests/test_basic.py \
+    -- html=reports/basic.html \
+    --self-contained-html
+
+------------------------------------------
+
+(.venv) dhinesh@Arise:~/eclipse-workspace/SDET/python-sdet$ pytest -m smoke \
+  -v \
+  --html=reports/smoke.html \
+  --self-contained-html
+=============================== test session starts ===============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /home/dhinesh/eclipse-workspace/SDET/python-sdet/.venv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.12.3', 'Platform': 'Linux-7.0.0-31-generic-x86_64-with-glibc2.39', 'Packages': {'pytest': '9.1.1', 'pluggy': '1.6.0'}, 'Plugins': {'metadata': '3.1.1', 'html': '4.2.0'}}
+rootdir: /home/dhinesh/eclipse-workspace/SDET/python-sdet
+plugins: metadata-3.1.1, html-4.2.0
+collected 5 items / 5 deselected / 0 selected                                     
+
+- Generated html report: file:///home/dhinesh/eclipse-workspace/SDET/python-sdet/reports/smoke.html -
+============================== 5 deselected in 0.02s ==============================
+
+Ex3: 
+ Generate a complete regression report
+
+pytest -m regression \
+    -v \
+    --tb=short \
+    --html=reports/regression.html \
+    --self.contained-html
+
+---------------------------------------------------    
+(.venv) dhinesh@Arise:~/eclipse-workspace/SDET/python-sdet$ pytest -m regression \
+  -v \
+  --tb=short \
+  --html=reports/regression.html \
+  --self-contained-html
+=============================== test session starts ===============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /home/dhinesh/eclipse-workspace/SDET/python-sdet/.venv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.12.3', 'Platform': 'Linux-7.0.0-31-generic-x86_64-with-glibc2.39', 'Packages': {'pytest': '9.1.1', 'pluggy': '1.6.0'}, 'Plugins': {'metadata': '3.1.1', 'html': '4.2.0'}}
+rootdir: /home/dhinesh/eclipse-workspace/SDET/python-sdet
+plugins: metadata-3.1.1, html-4.2.0
+collected 5 items / 5 deselected / 0 selected                                     
+
+- Generated html report: file:///home/dhinesh/eclipse-workspace/SDET/python-sdet/reports/regression.html -
+============================== 5 deselected in 0.02s ==============================
+(.venv) dhinesh@Arise:~/eclipse-workspace/SDET/python-sdet$ 
+
