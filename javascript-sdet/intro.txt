@@ -1,0 +1,25 @@
+4.1 What is Node.js?
+
+Node.js
+is a JavaScript runtime that allows you to execute JavaScript outside a web browser.
+
+4.2 What is npm?
+
+npm
+is a package manager used to install and manage JavaScript libraries and project dependencies.
+
+For SDET, Node.js executes your tests, while npm helps you manage Playwright, testing utilities and scripts.
+
+Important commands
+
+command            purpose
+node --version     check Node.js version
+npm --version      check npm version
+npm init -y        create a package.json
+npm install        Install project dependencies
+npm install -D     Install development dependencies
+npm uninstall      Remove package
+npm test           run the configured test script
+npm list           list installed packages
+
+

@@ -1,0 +1,24 @@
+# Python Virtual Environments
+venv/
+.env/
+.venv/
+env/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Binaries and Executables
+bin/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Java Build Artifacts
+*.class
+*.jar
+*.war
+target/   
