@@ -1,0 +1,154 @@
+(.venv) dhinesh@Arise:~/eclipse-workspace/SDET/python-sdet/project1$ pytest -v
+=============================== test session starts ===============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /home/dhinesh/eclipse-workspace/SDET/python-sdet/.venv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.12.3', 'Platform': 'Linux-7.0.0-31-generic-x86_64-with-glibc2.39', 'Packages': {'pytest': '9.1.1', 'pluggy': '1.6.0'}, 'Plugins': {'metadata': '3.1.1', 'html': '4.2.0'}}
+rootdir: /home/dhinesh/eclipse-workspace/SDET/python-sdet/project1
+configfile: pytest.ini
+testpaths: tests
+plugins: metadata-3.1.1, html-4.2.0
+collected 11 items                                                                
+
+tests/test_database.py::test_api_user_is_saved_in_database PASSED           [  9%]
+tests/test_database.py::test_duplicate_email_constraint PASSED              [ 18%]
+tests/test_user_api.py::test_health_endpoint PASSED                         [ 27%]
+tests/test_user_api.py::test_create_and_get_user PASSED                     [ 36%]
+tests/test_user_api.py::test_update_user FAILED                             [ 45%]
+tests/test_user_api.py::test_invalid_user_creation[payload0] PASSED         [ 54%]
+tests/test_user_api.py::test_invalid_user_creation[payload1] PASSED         [ 63%]
+tests/test_user_api.py::test_invalid_user_creation[payload2] PASSED         [ 72%]
+tests/test_user_api.py::test_invalid_user_creation[payload3] PASSED         [ 81%]
+tests/test_user_api.py::test_nonexistent_user PASSED                        [ 90%]
+tests/test_user_api.py::test_delete_user PASSED                             [100%]
+
+==================================== FAILURES =====================================
+________________________________ test_update_user _________________________________
+
+api = <requests.sessions.Session object at 0x733edba27a40>
+base_url = 'http://127.0.0.1:5000'
+created_user = {'email': 'user-9b8d1b5f97944492aa3631806d8e64ec@example.test', 'id': 4, 'name': 'Test User'}
+
+    @pytest.mark.regression
+    def test_update_user(api, base_url, created_user):
+        payload = {
+            "name" : "Updated user",
+            "email": " updated-"+created_user["email"]
+        }
+    
+        response = api.put(
+            f"{base_url}/users/{created_user['id']}",
+            json=payload,
+            timeout=5
+        )
+    
+        assert response.status_code == 200
+>       assert response.json()["name"] == "Updated User"
+E       AssertionError: assert 'Updated user' == 'Updated User'
+E         
+E         - Updated User
+E         ?         ^
+E         + Updated user
+E         ?         ^
+
+tests/test_user_api.py:55: AssertionError
+------------------------------- Captured log setup --------------------------------
+INFO     api_tests:conftest.py:59 START: tests/test_user_api.py::test_update_user
+------------------------------ Captured log teardown ------------------------------
+INFO     api_tests:conftest.py:61 FINISH: tests/test_user_api.py::test_update_user
+============================= short test summary info =============================
+FAILED tests/test_user_api.py::test_update_user - AssertionError: assert 'Updated user' == 'Updated User'
+========================== 1 failed, 10 passed in 0.20s ===========================
+(.venv) dhinesh@Arise:~/eclipse-workspace/SDET/python-sdet/project1$ pytest -m smoke -v
+=============================== test session starts ===============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /home/dhinesh/eclipse-workspace/SDET/python-sdet/.venv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.12.3', 'Platform': 'Linux-7.0.0-31-generic-x86_64-with-glibc2.39', 'Packages': {'pytest': '9.1.1', 'pluggy': '1.6.0'}, 'Plugins': {'metadata': '3.1.1', 'html': '4.2.0'}}
+rootdir: /home/dhinesh/eclipse-workspace/SDET/python-sdet/project1
+configfile: pytest.ini
+testpaths: tests
+plugins: metadata-3.1.1, html-4.2.0
+collected 11 items / 9 deselected / 2 selected                                    
+
+tests/test_user_api.py::test_health_endpoint PASSED                         [ 50%]
+tests/test_user_api.py::test_create_and_get_user PASSED                     [100%]
+
+========================= 2 passed, 9 deselected in 0.07s =========================
+(.venv) dhinesh@Arise:~/eclipse-workspace/SDET/python-sdet/project1$ pytest -m smoke -v
+=============================== test session starts ===============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /home/dhinesh/eclipse-workspace/SDET/python-sdet/.venv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.12.3', 'Platform': 'Linux-7.0.0-31-generic-x86_64-with-glibc2.39', 'Packages': {'pytest': '9.1.1', 'pluggy': '1.6.0'}, 'Plugins': {'metadata': '3.1.1', 'html': '4.2.0'}}
+rootdir: /home/dhinesh/eclipse-workspace/SDET/python-sdet/project1
+configfile: pytest.ini
+testpaths: tests
+plugins: metadata-3.1.1, html-4.2.0
+collected 11 items / 9 deselected / 2 selected                                    
+
+tests/test_user_api.py::test_health_endpoint PASSED                         [ 50%]
+tests/test_user_api.py::test_create_and_get_user PASSED                     [100%]
+
+========================= 2 passed, 9 deselected in 0.04s =========================
+(.venv) dhinesh@Arise:~/eclipse-workspace/SDET/python-sdet/project1$ pytest -v \
+  --html=reports/api-report.html \
+  --self-contained-html
+=============================== test session starts ===============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /home/dhinesh/eclipse-workspace/SDET/python-sdet/.venv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.12.3', 'Platform': 'Linux-7.0.0-31-generic-x86_64-with-glibc2.39', 'Packages': {'pytest': '9.1.1', 'pluggy': '1.6.0'}, 'Plugins': {'metadata': '3.1.1', 'html': '4.2.0'}}
+rootdir: /home/dhinesh/eclipse-workspace/SDET/python-sdet/project1
+configfile: pytest.ini
+testpaths: tests
+plugins: metadata-3.1.1, html-4.2.0
+collected 11 items                                                                
+
+tests/test_database.py::test_api_user_is_saved_in_database PASSED           [  9%]
+tests/test_database.py::test_duplicate_email_constraint PASSED              [ 18%]
+tests/test_user_api.py::test_health_endpoint PASSED                         [ 27%]
+tests/test_user_api.py::test_create_and_get_user PASSED                     [ 36%]
+tests/test_user_api.py::test_update_user FAILED                             [ 45%]
+tests/test_user_api.py::test_invalid_user_creation[payload0] PASSED         [ 54%]
+tests/test_user_api.py::test_invalid_user_creation[payload1] PASSED         [ 63%]
+tests/test_user_api.py::test_invalid_user_creation[payload2] PASSED         [ 72%]
+tests/test_user_api.py::test_invalid_user_creation[payload3] PASSED         [ 81%]
+tests/test_user_api.py::test_nonexistent_user PASSED                        [ 90%]
+tests/test_user_api.py::test_delete_user PASSED                             [100%]
+
+==================================== FAILURES =====================================
+________________________________ test_update_user _________________________________
+
+api = <requests.sessions.Session object at 0x70e9f01d5a90>
+base_url = 'http://127.0.0.1:5000'
+created_user = {'email': 'user-16912af559394b58a83c732fcfac1fe7@example.test', 'id': 10, 'name': 'Test User'}
+
+    @pytest.mark.regression
+    def test_update_user(api, base_url, created_user):
+        payload = {
+            "name" : "Updated user",
+            "email": " updated-"+created_user["email"]
+        }
+    
+        response = api.put(
+            f"{base_url}/users/{created_user['id']}",
+            json=payload,
+            timeout=5
+        )
+    
+        assert response.status_code == 200
+>       assert response.json()["name"] == "Updated User"
+E       AssertionError: assert 'Updated user' == 'Updated User'
+E         
+E         - Updated User
+E         ?         ^
+E         + Updated user
+E         ?         ^
+
+tests/test_user_api.py:55: AssertionError
+------------------------------- Captured log setup --------------------------------
+INFO     api_tests:conftest.py:59 START: tests/test_user_api.py::test_update_user
+------------------------------ Captured log teardown ------------------------------
+INFO     api_tests:conftest.py:61 FINISH: tests/test_user_api.py::test_update_user
+- Generated html report: file:///home/dhinesh/eclipse-workspace/SDET/python-sdet/project1/reports/api-report.html -
+============================= short test summary info =============================
+FAILED tests/test_user_api.py::test_update_user - AssertionError: assert 'Updated user' == 'Updated User'
+========================== 1 failed, 10 passed in 0.20s ===========================
+(.venv) dhinesh@Arise:~/eclipse-workspace/SDET/python-sdet/project1$ 
