@@ -1,0 +1,7 @@
+command                     purpose
+pytest -v                   detailed test output
+pytest -q                   concise test output
+pytest -s                   show print output
+pytest tests.test_basic.py  run one file
+pytest -k login             run tests matching a name
+pytest --collect-only       list discovered tests

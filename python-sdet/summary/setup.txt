@@ -1,0 +1,32 @@
+Step 1: Check Python and pip
+
+Open your terminal.
+
+python3 --version
+pip3 --version
+
+Python 3.10 or newer is suitable for these examples.
+
+Step 2: Create your project
+mkdir python-sdet
+cd python-sdet
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+Your terminal should now show the virtual environment name, usually (.venv).
+
+Step 3: Install the libraries
+python -m pip install --upgrade pip
+
+pip install pytest
+pip install selenium
+pip install requests
+pip install pytest-html
+
+For the database examples, we'll use Python's built-in sqlite3 library. You don't need to install it separately.
+
+Step 4: Verify your installation
+python -m pytest --version
+
+python -c "import selenium, requests, pytest_html; print('All installed')"
