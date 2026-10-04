@@ -1,0 +1,12 @@
+Assertion             Purpose
+toBeVisible()        Element is Visible
+toBeHidden()         Element is Hidden 
+toBeEnabled()        Element is enabled 
+toBeDisabled()       Element is disabled 
+toHaveText()         Text matches
+toContainText()      Text contains expected text
+toHaveValue()        Input has expected value 
+toHaveURL()          URL matches 
+toHaveTitle()        Page title matches 
+toHaveCount()        Locater matches expected number of elements 
+ 

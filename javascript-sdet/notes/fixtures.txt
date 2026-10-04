@@ -1,0 +1,10 @@
+Fixtures provide the resources and setup required by test.
+playwright's built in fixtures include page, context, browser, and request 
+
+Learn:
+- Built in fixtures
+- Test-scoped and worker-scoped fixtures 
+- Custom fixtures 
+- Setup and teardown
+- Fixture dependencies
+

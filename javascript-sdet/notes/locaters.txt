@@ -1,0 +1,13 @@
+Locater identify elements on a web page, such as buttons, text fields, links and checkboxes.
+playwright locaters are designed to wait for elements to become actionable and retry when appropriate
+
+
+Locater         Example                          use
+getByRole()    getByRole("button")           Buttons,links and accessible elements
+getByText()    getByText("Login")            Visible text
+getByLable()   getByLabel("Email")           Labled form fields
+getByPlaceholder()   getByPlaceholder("Email") fields with placeholders
+getByTestId()   getByTestId("submit")          Elements with test ID's 
+locater()       locater("#username")           CSS selectors and xpath
+
+
