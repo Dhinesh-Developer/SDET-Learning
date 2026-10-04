@@ -1,0 +1,25 @@
+10.2 TypeScript setup
+
+Inside your project, install TypeScript:
+npm install -D typescript
+
+Create a configuration:
+npx tsc --init
+
+For a basic Node.js project, a simple tsconfig.json can be:
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts"]
+}
+
+Create the source folder:
+mkdir src
